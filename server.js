@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-import session from 'express-session';
+// import session from 'express-session';
 import router from "./router/index.js";
 import * as dotenv from 'dotenv'
 dotenv.config()
