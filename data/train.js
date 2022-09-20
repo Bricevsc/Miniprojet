@@ -13,10 +13,10 @@ export async function connect() {
   });
 }
 
-export async function all() {
+export async function Search(params) {
   const conn = await connect();
 
-  const passengers = await TrainModel.find();
+  const passengers = await TrainModel.find({params});
 
   return passengers;
 }
