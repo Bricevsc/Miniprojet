@@ -6,13 +6,23 @@ block content
     form(action='#', method='POST')
         fieldset
             legend.h2.text-warning Research
-            label.form-label Sex: 
-            select(type='email', name='sex', value='' required)
-                option(value=1) F
-                option(value=2) M
-            label.form-label Age : 
-            input(type='number', name='age', value='' required)
-            label.form-label Classe : 
-            input(type='password', name='password', value='' required)
-            br
+            div.col-md-6
+                label.form-label Sex: 
+                select.form-select
+                    option(selected) Choose the gender...
+                    option(value="F") F
+                    option(value="M") M
+
+            div.col-md-6
+                label.form-label Age : 
+                input.form-control(type='number', name='age', value='')
+            
+            div.col-md-6
+                label.form-label Classe : 
+                select.form-select
+                    option(selected) Choose the class...
+                    option(value="1") 1
+                    option(value="2") 2
+                    option(value="3") 3
+            
             input.btn.btn-primary.mt-2(type='submit', value='Submit')
