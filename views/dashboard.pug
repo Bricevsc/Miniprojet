@@ -2,4 +2,36 @@ extends layouts/master.pug
 
 block content
     p dashboard sécu
-    
+    form(class="row g-3", action="/dashboard", method="get")
+        div 
+            p Age :
+            input(type="radio" id="AgeType1" name="AgeType", value="$gt" required)
+            label(for="AgeType1") supérieur a
+            input(type="radio" id="AgeType2" name="AgeType", value="$lt")
+            label(for="AgeType2") inférieur a
+            div
+                label Age
+                input(type="number" name="age")
+
+        div
+            input(type="radio" id="Class1" name="class", value="1")
+            label(for="Class1") Class 1
+            input(type="radio" id="Class2" name="class", value="2")
+            label(for="Class2") Class 2
+            input(type="radio" id="Class3" name="class", value="3")
+            label(for="Class3") Class 3
+
+        div
+            input(type="radio" id="alive" name="alive" value="1")
+            label(for="alive") Vivant
+            input(type="radio" id="dead" name="alive" value="0")
+            label(for="dead") Mort 
+
+        div
+            input(type="radio" id="male" name="sex" value="male")
+            label(for="male") male
+            input(type="radio" id="female" name="sex" value="female")
+            label(for="female") female         
+
+        div.col-md-12
+            button(type="submit", class="btn btn-primary") Search
