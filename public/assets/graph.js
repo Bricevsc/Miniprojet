@@ -1,13 +1,14 @@
-// import  from './dashboard.js'
+import { data } from "../../controllers/dashboard";
 
 const ctx = document.getElementById('myChart').getContext('2d');
+
 const myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ['Total passagers','Recherche'],
+        labels: ['Total passagers', 'RechercheAlive', 'RechercheDead'],
         datasets: [{
-            label: '',
-            data: [891,],
+            label: 'All',
+            data: [data],
             backgroundColor: [
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
