@@ -38,6 +38,7 @@ export default async function (req, res) {
 
   await connect();
   const passengers = await TrainModel.find();
+  const all = passengers.length
   const AgeVar = 5
   //console.log(passengers)
   const male = passengers.filter(elem => elem.Sex === 'male');
