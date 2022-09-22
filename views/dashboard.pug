@@ -16,8 +16,6 @@ block content
             div.col-md-6
                 label.form-label Age : 
                 input.form-control(type='number' name='age' value='')
-                input(type="radio" id="AgeType1" name="AgeType" value="$gt" required)
-
 
             div.col-md-6
                 label.form-label Classe : 
@@ -27,12 +25,10 @@ block content
                     option(value="2") 2
                     option(value="3") 3
 
-            div.col-md-6
-                input(type="radio" id="alive" name="alive" value="1")
-                label(for="alive") Vivant
-                input(type="radio" id="dead" name="alive" value="0")
-                label(for="dead") Mort 
 
             input.btn.btn-primary.mt-2(type='submit' value='Submit')
 
-            canvas(id="myChart", width="10%", height="5%")
+            div
+                canvas(id="myChart")
+    script(src='./assets/graph.js' type="module")
+    script(src='./assets/test.js' type="module")

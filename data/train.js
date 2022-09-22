@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { TrainModel } from "../model/Train.js";
 
 import * as dotenv from "dotenv";
 dotenv.config();
@@ -11,12 +10,4 @@ export async function connect() {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
-}
-
-export async function Search(params) {
-  await connect();
-
-  const passengers = await TrainModel.find({params});
-
-  return passengers;
 }
