@@ -8,7 +8,7 @@ block content
             div.col-md-6
                 label.form-label Sex: 
                 select.form-select(name='sex')
-                    option(selected) Choose the gender...
+                    option(selected value="") Choose the gender...
                     option(value="female") F
                     option(value="male") M
 
@@ -19,13 +19,13 @@ block content
             div.col-md-6
                 label.form-label Classe : 
                 select.form-select(name='class')
-                    option(selected) Choose the class...
+                    option(selected value="") Choose the class...
                     option(value="1") 1
                     option(value="2") 2
                     option(value="3") 3
 
             input.btn.btn-primary.mt-2(type='submit' value='Submit')
-            input.btn.btn-primary.mt-2(type='button' Onclick=reset())
+            //input.btn.btn-primary.mt-2(type='button' Onclick=reset())
 
 
             div.col-md-6.order-1
