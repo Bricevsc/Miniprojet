@@ -7,17 +7,17 @@ const data = preData[1].split(",");
 const myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ['Total passagers', 'RechercheAlive', 'RechercheDead'],
+        labels: ['SearchAlive', 'SearchDead'],
         datasets: [{
             label: 'All',
             data: data,
             backgroundColor: [
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
+              'rgba(26, 196, 18, 0.2)',
+              'rgba(196, 18, 77, 0.2)',
             ],
             borderColor: [
-                'rgba(54, 162, 235, 1)',
-                'rgba(54, 162, 235, 0.2)',
+              'rgba(26, 196, 18, 1)',
+              'rgba(196, 18, 77, 1)',
             ],
             borderWidth: 1
         }]
