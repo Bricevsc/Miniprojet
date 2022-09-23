@@ -1,6 +1,7 @@
-import { data } from "../../controllers/dashboard";
-
 const ctx = document.getElementById('myChart').getContext('2d');
+const dataFromPug = document.getElementById('data');
+const preData = dataFromPug.classList.value.split("'");
+const data = preData[1].split(",");
 
 const myChart = new Chart(ctx, {
     type: 'doughnut',
@@ -8,7 +9,7 @@ const myChart = new Chart(ctx, {
         labels: ['Total passagers', 'RechercheAlive', 'RechercheDead'],
         datasets: [{
             label: 'All',
-            data: [data],
+            data: data,
             backgroundColor: [
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

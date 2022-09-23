@@ -22,9 +22,7 @@ export default async function (req, res) {
 
   const searchDataAlive = searchData.filter(elem => elem.Survived === 1);
   const searchDataDead = searchData.filter(elem => elem.Survived === 0);
-  data.push(passengers, searchDataAlive, searchDataDead)
+  data.push(passengers.length, searchDataAlive.length, searchDataDead.length)
 
-  res.render('dashboard')
-}
-// femme >30ans premiere vivante
-export { data }
+  res.render('dashboard',{ aaa : data})
+};
