@@ -14,6 +14,7 @@ mongoose.connect("mongodb://localhost:27017/titanic", {
 });
 
 app.use(express.static("public"));
+
 app.set("view engine", "pug");
 
 // récupérer les données post sous forme d'un JSON
