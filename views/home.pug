@@ -1,8 +1,6 @@
 extends layouts/master.pug 
 
 block content
-    if message
-        div(class="alert alert-warning mt-3") #{message}
     p If you're new here, please register below.
 
     form(class="row g-3", action="/register", method="post")
