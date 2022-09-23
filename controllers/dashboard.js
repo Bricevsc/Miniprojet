@@ -28,3 +28,7 @@ export default async function (req, res) {
 }
 // femme >30ans premiere vivante
 export { data }
+
+export function reset(data){
+  return data = 0
+}
