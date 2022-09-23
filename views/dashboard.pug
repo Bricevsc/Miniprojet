@@ -1,7 +1,6 @@
 extends layouts/master.pug 
 
 block content
-    p dashboard sécu
 
     form(action='/dashboard' method='GET')
         fieldset
@@ -25,10 +24,12 @@ block content
                     option(value="2") 2
                     option(value="3") 3
 
-
             input.btn.btn-primary.mt-2(type='submit' value='Submit')
+            input.btn.btn-primary.mt-2(type='button' Onclick=reset())
 
-            div
+
+            div.col-md-6.order-1
                 canvas(id="myChart")
     div(id="data" class="'"+aaa+"'")            
     script(src='./assets/graph.js' type="module")
+

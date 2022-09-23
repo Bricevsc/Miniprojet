@@ -1,3 +1,4 @@
+
 const ctx = document.getElementById('myChart').getContext('2d');
 const dataFromPug = document.getElementById('data');
 const preData = dataFromPug.classList.value.split("'");
@@ -21,11 +22,5 @@ const myChart = new Chart(ctx, {
             borderWidth: 1
         }]
     },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
+  },
+)
