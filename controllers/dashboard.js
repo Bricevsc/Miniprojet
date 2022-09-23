@@ -24,5 +24,13 @@ export default async function (req, res) {
   const searchDataDead = searchData.filter(elem => elem.Survived === 0);
   data.push(passengers.length, searchDataAlive.length, searchDataDead.length)
 
-  res.render('dashboard',{ aaa : data})
-};
+
+  res.render('dashboard')
+}
+// femme >30ans premiere vivante
+export { data }
+
+export function reset(data){
+  return data = 0
+}
+
