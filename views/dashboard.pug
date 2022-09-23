@@ -1,7 +1,6 @@
 extends layouts/master.pug 
 
 block content
-    p dashboard sécu
 
     form(action='/dashboard' method='GET')
         fieldset
@@ -25,8 +24,7 @@ block content
                     option(value="2") 2
                     option(value="3") 3
 
-
             input.btn.btn-primary.mt-2(type='submit' value='Submit')
 
-            div
+            div.col-md-6.order-1
                 canvas(id="myChart")
