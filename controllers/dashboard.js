@@ -23,7 +23,7 @@ export default async function (req, res) {
 
   const searchDataAlive = searchData.filter(elem => elem.Survived === 1);
   const searchDataDead = searchData.filter(elem => elem.Survived === 0);
-  data.push(passengers.length, searchDataAlive.length, searchDataDead.length);
+  data.push(passengers.length - searchDataAlive.length - searchDataDead.length, searchDataAlive.length, searchDataDead.length);
 
   res.render('dashboard', { aaa: data })
 };
